@@ -1,0 +1,48 @@
+/* ===== Page header (also reused by cart, wishlist, checkout pages) ===== */
+.page-header {
+  padding: 50px 0 10px;
+  background: radial-gradient(circle at 85% 0%, rgba(139, 92, 246, 0.2), transparent 55%);
+}
+
+/* ===== Toolbar: search + sort ===== */
+.shop-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin: 26px 0 18px; }
+.shop-search {
+  display: flex; flex: 1 1 280px; max-width: 440px; overflow: hidden;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 999px; transition: var(--transition);
+}
+.shop-search:focus-within { border-color: var(--primary); box-shadow: var(--shadow); }
+.shop-search input { flex: 1; min-width: 0; background: none; border: none; outline: none; padding: 11px 18px; }
+.shop-search span { padding: 0 16px; display: flex; align-items: center; color: var(--muted); }
+
+.sort-wrap { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 0.9rem; }
+.sort-select {
+  padding: 10px 16px; border-radius: 999px; outline: none; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); transition: var(--transition);
+}
+.sort-select:hover, .sort-select:focus { border-color: var(--primary); }
+.sort-select option { background: var(--surface); color: #fff; }
+
+/* ===== Category chips ===== */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.chip {
+  padding: 8px 20px; border-radius: 999px; font-weight: 500; color: var(--muted);
+  background: var(--surface); border: 1px solid var(--border); transition: var(--transition);
+}
+.chip:hover { border-color: var(--primary); color: #fff; }
+.chip.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* ===== Results bar ===== */
+.results-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; color: var(--muted); }
+.clear-btn { color: var(--primary); font-weight: 600; }
+.clear-btn:hover { text-decoration: underline; }
+.clear-btn[hidden] { display: none; }
+.empty-message .btn { margin-top: 14px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 560px) {
+  .shop-search { max-width: none; flex-basis: 100%; }
+  .sort-wrap { width: 100%; }
+  .sort-select { flex: 1; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+  .chip { white-space: nowrap; }
+}

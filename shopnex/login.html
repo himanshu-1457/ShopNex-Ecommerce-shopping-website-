@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register | SHOPNEX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="auth-section">
+    <div class="auth-card fade-in">
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Login</button>
+        <button class="auth-tab" data-tab="register">Register</button>
+      </div>
+
+      <!-- LOGIN -->
+      <section class="auth-panel" id="loginPanel">
+        <h1>Welcome back</h1>
+        <p class="sub">Login to continue shopping</p>
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+            <span class="field-error" id="loginEmailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+              <button type="button" class="password-toggle" data-target="loginPassword" aria-label="Show or hide password">👁️</button>
+            </div>
+            <span class="field-error" id="loginPasswordError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <p class="auth-switch">New to SHOPNEX? <button type="button" data-tab="register">Create an account</button></p>
+      </section>
+
+      <!-- REGISTER -->
+      <section class="auth-panel" id="registerPanel" hidden>
+        <h1>Create account</h1>
+        <p class="sub">Join SHOPNEX in less than a minute</p>
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="regName">Full name</label>
+            <input type="text" id="regName" placeholder="Your name" autocomplete="name">
+            <span class="field-error" id="regNameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email</label>
+            <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email">
+            <span class="field-error" id="regEmailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="regPassword" placeholder="Min 6 characters, letters + numbers" autocomplete="new-password">
+              <button type="button" class="password-toggle" data-target="regPassword" aria-label="Show or hide password">👁️</button>
+            </div>
+            <span class="field-error" id="regPasswordError"></span>
+          </div>
+          <div class="form-group">
+            <label for="regConfirm">Confirm password</label>
+            <input type="password" id="regConfirm" placeholder="Re-enter your password" autocomplete="new-password">
+            <span class="field-error" id="regConfirmError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </form>
+        <p class="auth-switch">Already have an account? <button type="button" data-tab="login">Login</button></p>
+      </section>
+
+      <p class="auth-note">🔒 Demo project: accounts are saved only in this browser.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | SHOPNEX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-header">
+      <div class="container fade-in">
+        <h1 class="section-title">All <span class="text-purple">Products</span></h1>
+        <p class="section-subtitle">Search, filter and sort to find your perfect product</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <!-- Search + sort -->
+      <div class="shop-toolbar">
+        <div class="shop-search">
+          <span>🔍</span>
+          <input type="search" id="shopSearchInput" placeholder="Search by name, category..." aria-label="Search products">
+        </div>
+        <div class="sort-wrap">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="default">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category filter (buttons are created by JS) -->
+      <div class="chips" id="categoryChips"></div>
+
+      <!-- Result count + clear -->
+      <div class="results-bar">
+        <span id="resultsText"></span>
+        <button class="clear-btn" id="clearFilters" hidden>✕ Clear filters</button>
+      </div>
+
+      <!-- Product cards -->
+      <div class="product-grid" id="productsGrid"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

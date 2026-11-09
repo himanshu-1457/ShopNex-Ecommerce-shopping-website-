@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOPNEX | Premium Online Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Hero banner -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content fade-in">
+          <span class="hero-tag">✨ New Season Collection</span>
+          <h1>Upgrade Your <span class="text-purple">Style.</span><br>Elevate Your Life.</h1>
+          <p>Discover premium electronics, fashion, shoes and accessories at unbeatable prices, all in one place.</p>
+          <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+            <a href="#categories" class="btn btn-outline">Explore Categories</a>
+            <a href="login.html?tab=register" class="btn">Create Account</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>16+</strong><span>Products</span></div>
+            <div><strong>4</strong><span>Categories</span></div>
+            <div><strong>Free</strong><span>Delivery</span></div>
+          </div>
+        </div>
+        <div class="hero-visual fade-in">
+          <div class="hero-circle">🛍️</div>
+          <span class="hero-chip chip-1">🎧 Electronics</span>
+          <span class="hero-chip chip-2">👟 Shoes</span>
+          <span class="hero-chip chip-3">👕 Fashion</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features strip -->
+    <section class="container">
+      <div class="features-grid">
+        <div class="feature-item"><span class="feature-icon">🚚</span><div><h4>Free Delivery</h4><p>On all orders</p></div></div>
+        <div class="feature-item"><span class="feature-icon">↩️</span><div><h4>Easy Returns</h4><p>Hassle-free process</p></div></div>
+        <div class="feature-item"><span class="feature-icon">🛡️</span><div><h4>Quality Products</h4><p>Carefully selected</p></div></div>
+        <div class="feature-item"><span class="feature-icon">💬</span><div><h4>Support</h4><p>Always here to help</p></div></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section container" id="categories">
+      <h2 class="section-title">Shop by <span class="text-purple">Category</span></h2>
+      <p class="section-subtitle">Find exactly what you are looking for</p>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <!-- Featured products -->
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Featured <span class="text-purple">Products</span></h2>
+          <p class="section-subtitle">Hand-picked just for you</p>
+        </div>
+        <a href="products.html" class="view-all">View all →</a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <!-- Trending products -->
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Trending <span class="text-purple">Now</span></h2>
+          <p class="section-subtitle">What everyone is buying right now</p>
+        </div>
+        <a href="products.html" class="view-all">View all →</a>
+      </div>
+      <div class="product-grid" id="trendingGrid"></div>
+    </section>
+
+    <!-- Join banner -->
+    <section class="section container" id="joinBanner">
+      <div class="promo">
+        <h2>Join SHOPNEX Today</h2>
+        <p>Create a free account to save your wishlist and checkout faster.</p>
+        <a href="login.html" class="btn">Create Account</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Script order matters: data -> storage -> ui -> features -> page script -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

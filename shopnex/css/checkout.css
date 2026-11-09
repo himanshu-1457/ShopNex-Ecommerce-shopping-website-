@@ -1,0 +1,60 @@
+/* ===== Checkout form card ===== */
+.checkout-card { padding: 26px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.checkout-card h3 { margin-bottom: 4px; font-size: 1.2rem; }
+.checkout-card .sub { margin-bottom: 20px; color: var(--muted); font-size: 0.9rem; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.form-group textarea { resize: vertical; min-height: 84px; }
+
+/* ===== Summary items ===== */
+.summary-items { max-height: 260px; overflow-y: auto; margin-bottom: 16px; padding-right: 4px; }
+.summary-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.summary-item-emoji {
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 46px; height: 46px; font-size: 1.6rem; border-radius: 10px; background: var(--surface-2);
+}
+.summary-item-info { flex: 1; min-width: 0; font-size: 0.88rem; line-height: 1.4; }
+.summary-item-info small { display: block; color: var(--muted); }
+.summary-item-price { font-weight: 600; font-size: 0.9rem; }
+.demo-note {
+  margin-top: 14px; padding: 12px 14px; border-radius: 12px; font-size: 0.82rem; color: var(--muted);
+  border: 1px dashed var(--primary); background: rgba(139, 92, 246, 0.08);
+}
+
+/* ===== Order success page ===== */
+.success-wrap { max-width: 780px; margin: 50px auto 70px; text-align: center; }
+.success-check {
+  display: flex; align-items: center; justify-content: center; width: 90px; height: 90px; margin: 0 auto 20px;
+  border-radius: 50%; font-size: 2.8rem; background: var(--primary); box-shadow: 0 0 50px rgba(139, 92, 246, 0.5);
+  animation: pop 0.6s ease both;
+}
+@keyframes pop { 0% { transform: scale(0); } 70% { transform: scale(1.15); } 100% { transform: scale(1); } }
+.success-wrap h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 6px; }
+.success-wrap > p { color: var(--muted); }
+.order-id {
+  display: inline-block; margin: 18px 0 28px; padding: 8px 20px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--primary); font-weight: 600;
+}
+.success-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; text-align: left; }
+.success-card { padding: 22px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); }
+.success-card h3 { margin-bottom: 12px; font-size: 1.05rem; }
+.success-card p { color: var(--muted); font-size: 0.92rem; margin-bottom: 4px; }
+.success-card p strong { color: #fff; }
+.success-items { margin-bottom: 20px; text-align: left; }
+.success-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 560px) {
+  .form-row-2, .form-row-3, .success-grid { grid-template-columns: 1fr; gap: 0; }
+  .success-grid { gap: 16px; }
+  .checkout-card { padding: 20px 16px; }
+}
+
+/* Print: only the order receipt */
+@media print {
+  .navbar, .footer, .success-actions, .toast-container { display: none !important; }
+  body { background: #fff; color: #000; }
+  .success-card, .order-id { background: #fff; border-color: #999; color: #000; }
+  .success-card p, .success-wrap > p { color: #333; }
+  .success-card p strong { color: #000; }
+}
